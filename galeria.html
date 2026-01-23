@@ -6,6 +6,24 @@
   <title>Diseños | Ari’s GC Nail Artist</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+
+
 
 <body class="bg-pink-50">
 
@@ -19,19 +37,74 @@
     </p>
   </header>
 
-  <!-- GALERÍA -->
-  <section class="px-6 py-12 max-w-6xl mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+ <section class="px-4 py-12 max-w-6xl mx-auto">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
 
-      <img src="img/nails1.jpg" class="rounded-2xl shadow-lg object-cover" alt="Diseño de uñas">
-      <img src="img/nails2.jpg" class="rounded-2xl shadow-lg object-cover" alt="Diseño de uñas">
-      <img src="img/nails3.jpg" class="rounded-2xl shadow-lg object-cover" alt="Diseño de uñas">
-      <img src="img/nails4.jpg" class="rounded-2xl shadow-lg object-cover" alt="Diseño de uñas">
-      <img src="img/nails5.jpg" class="rounded-2xl shadow-lg object-cover" alt="Diseño de uñas">
-      <img src="img/nails6.jpg" class="rounded-2xl shadow-lg object-cover" alt="Diseño de uñas">
+    <div class="group overflow-hidden rounded-xl shadow-md  fade-up">
+      <img src="ima/nails1.jpeg"
+           class="w-full aspect-square object-cover
+                  group-hover:scale-110 transition duration-500"
+           alt="Diseño de uñas">
+
+           
+     <a
+    href="https://wa.me/50767797134?text=Hola!%20💅✨%0A%0AMe%20interesa%20este%20diseño%20de%20uñas%20💖%0A%0A📸%20Diseño:%20Nails%205"
+    target="_blank"
+    class="absolute inset-0 flex items-end justify-center pb-4
+           bg-black/0 group-hover:bg-black/40
+           transition">
+
+     <span class="bg-green-500 text-white
+                 px-4 py-2 rounded-full
+                 text-sm font-semibold
+                 opacity-0 group-hover:opacity-100 transition">
+      📲 Me interesa este diseño
+    </span>
+   
+  </a>
+  
+
 
     </div>
-  </section>
+
+    <div class="group overflow-hidden rounded-xl shadow-md fade-up">
+      <img src="ima/nails2.png"
+           class="w-full aspect-square object-cover
+                  group-hover:scale-110 transition duration-500"
+           alt="Diseño de uñas">
+    </div>
+
+    <div class="group overflow-hidden rounded-xl shadow-md fade-up">
+      <img src="ima/nails3.png"
+           class="w-full aspect-square object-cover
+                  group-hover:scale-110 transition duration-500"
+           alt="Diseño de uñas">
+    </div>
+
+    <div class="group overflow-hidden rounded-xl shadow-md fade-up">
+      <img src="ima/nails4.jpeg"
+           class="w-full aspect-square object-cover
+                  group-hover:scale-110 transition duration-500"
+           alt="Diseño de uñas">
+    </div>
+
+    <div class="group overflow-hidden rounded-xl shadow-md fade-up">
+      <img src="ima/nails5.jpeg"
+           class="w-full aspect-square object-cover
+                  group-hover:scale-110 transition duration-500"
+           alt="Diseño de uñas">
+    </div>
+
+    <div class="group overflow-hidden rounded-xl shadow-md fade-up">
+      <img src="ima/nails6.jpeg"
+           class="w-full aspect-square object-cover
+                  group-hover:scale-110 transition duration-500"
+           alt="Diseño de uñas">
+    </div>
+
+  </div>
+</section>
+
 
   <!-- VOLVER -->
   <div class="text-center pb-10">
@@ -40,6 +113,15 @@
       ← Volver al inicio
     </a>
   </div>
+
+
+  <script>
+  function likeDesign(id) {
+    const counter = document.getElementById(id);
+    counter.textContent = parseInt(counter.textContent) + 1;
+  }
+</script>
+
 
 </body>
 </html>
